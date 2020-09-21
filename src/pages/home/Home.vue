@@ -1,14 +1,15 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <dvi>
+    hello world
+  </dvi>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Home.vue'
 }
 </script>
 
-<style>
+<style scoped>
+
 </style>
