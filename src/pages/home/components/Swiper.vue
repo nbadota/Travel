@@ -2,13 +2,13 @@
   <div class="wrapper">
     <swiper :options="swiperOptions">
       <swiper-slide>
-        图片1
+        <img src="https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg">
       </swiper-slide>
       <swiper-slide>
-        图片2
+        <img src="https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg">
       </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    <div class="swiper-pagination" slot="pagination"></div>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 0;
-  padding-bottom: 31.25%;
+  padding-bottom: 33.9%;
   background: #ccc;
 }
 img {
