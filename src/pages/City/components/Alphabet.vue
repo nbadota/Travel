@@ -24,7 +24,8 @@ export default {
   data: function () {
     return {
       touchStatus: false,
-      timer: null
+      timer: null,
+      lastTime: null
     };
   },
   updated () {
@@ -38,8 +39,10 @@ export default {
       this.touchStatus = true;
     },
     handleTouchMove (e) {
+      // 节流
       if (this.touchStatus) {
-        if (this.timer) {
+        let now = +new Date();
+        if (this.lastTime && this.lastTime - now < 16) {
           clearTimeout(this.timer);
         }
         this.timer = setTimeout(() => {
@@ -48,6 +51,7 @@ export default {
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index]);
           }
+          this.lastTime = +new Date();
         }, 16);
       }
     },
