@@ -63,6 +63,9 @@ export default {
         this.scroll.scrollToElement(element);
       }
     }
+  },
+  activated () {
+    this.scroll.refresh();
   }
 };
 </script>

@@ -42,7 +42,7 @@ export default {
       // 节流
       if (this.touchStatus) {
         let now = +new Date();
-        if (this.lastTime && this.lastTime - now < 16) {
+        if (this.lastTime && this.lastTime - now < 8) {
           clearTimeout(this.timer);
         }
         this.timer = setTimeout(() => {
@@ -52,7 +52,7 @@ export default {
             this.$emit('change', this.letters[index]);
           }
           this.lastTime = +new Date();
-        }, 16);
+        }, 8);
       }
     },
     handleTouchEnd () {
