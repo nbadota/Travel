@@ -2,11 +2,8 @@
     <div class="container" @click="handleGallaryClick">
       <div class="wrapper">
         <swiper :options="swiperOptions">
-          <swiper-slide>
-            <img class="gallary-img" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg">
-          </swiper-slide>
-          <swiper-slide>
-            <img class="gallary-img" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg">
+          <swiper-slide v-for="(item,index) of imgs" :key="index">
+            <img class="gallary-img" :src="item">
           </swiper-slide>
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
